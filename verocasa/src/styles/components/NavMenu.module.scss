@@ -1,0 +1,27 @@
+@import '../base/base.scss';
+
+:export {
+  black: $black80;
+  white: $white;
+}
+.menu {
+  @include flex-row;
+  margin-right: 20px;
+  &__item {
+    @include main-text;
+    line-height: 11px;
+    font-size: 14px;
+    color: $black80;
+    margin-right: 30px;
+    margin-top: 1px;
+    //text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $black100;
+      @include text-shadows;
+    }
+  }
+}

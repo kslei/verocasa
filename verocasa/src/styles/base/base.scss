@@ -1,0 +1,112 @@
+@import './_null.scss';
+@import './_fonts.scss';
+
+$black100: #000000;
+$black80: #343434;
+$black60: #626262;
+$black40: #959595;
+$black20: #cccccc;
+$black10: #e8e8e8;
+$white: #ffffff;
+$green: #4aaa4e;
+$gray: #d9d9d9;
+
+$font-size: 16px;
+$font-family: 'Roboto';
+
+//box-shadow
+@mixin text-shadows {
+  text-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.25) ;
+}
+@mixin shadows {
+  box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.25) ;
+}
+@mixin s1 {
+  box-shadow: 0 154px 62px rgba($color: #000000, $alpha: 0.01),
+  0 87px 52px rgba($color: #000000, $alpha: 0.05), 0 39px 39px rgba($color: #000000, $alpha: 0.09),
+  0 10px 21px rgba($color: #000000, $alpha: 0.1);
+}
+@mixin drop-shadow {
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
+}
+
+@mixin AG($font_family, $font_size, $font_weight, $line_height, $letter_spasing, $font-variant-caps) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font_weight;
+  line-height: $line_height;
+  letter-spacing: $letter_spasing;
+  font-variant-caps: $font-variant-caps;
+}
+h1 { 
+  @include AG("Roboto", 52px, 500, 68px, 0, small-caps) 
+}
+h2 {
+  @include AG("Roboto", 38px, 500, 50px, 0, small-caps)
+}
+h3 {
+  @include AG("Roboto", 26px, 500, 40px, 0, small-caps )
+}
+h4 {
+  @include AG("Roboto", 20px, 500, 26px, 0, small-caps)
+}
+//main-text
+h5 {
+  @include AG("Roboto", 16px, 400, 24px, 0, small-caps)
+}
+@mixin main-text {
+  @include AG("Roboto", 16px, 400, 24px, 0, small-caps)
+}
+//main-textV2
+p {
+  @include AG("Roboto", 16px, 500, 24px, 0, normal)
+}
+//little-text
+h6 {
+  @include AG("Roboto", 12px, 500, 16px, 0, small-caps)
+}
+@mixin little-text {
+  @include AG("Roboto", 12px, 400, 16px, 0, small-caps)}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  /* @include flex-column; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $gray ;
+}
+
+.wrapper {
+  width: calc(100% - 10px);
+  margin: 0 auto;
+  @include flex-column;
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+button {
+  padding: 20px 35px;
+  border-radius: 15px;
+  @include main-text;
+  line-height: 11px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    @include s1;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../base/base.scss';
+
+.panel {
+  position: relative;
+  width: 370px;
+  @include flex-row;
+  align-items: center;
+  input[type="text"] {
+    padding-block: 11px;
+    padding-inline-start: 40px;
+    
+  }
+}
+.input {
+  
+  width: 240px;
+  border: none;
+  background-color: $black10;
+  border-radius: 15px;
+  font-size: $font-size;
+}
+
+.heart, .bag, .search {
+  background-color: $black80;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  &:active {
+    background-color: $black100;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.search {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 21px;
+  height: 21px;
+  mask-image: url('/search.png');
+}
+.heart, .bag {
+  width: 24px;
+  height: 24px;
+}
+.heart {
+  mask-image: url('/heart.png');
+}
+.bag {
+  mask-image: url('/bag.png');
+}

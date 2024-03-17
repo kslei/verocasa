@@ -1,0 +1,30 @@
+@import '../base/base.scss';
+
+.futor {
+  width: 100%;
+  @include flex-column;
+  border-top: 1px solid $black20;
+  &__menu {
+    width: 100%;
+    padding: 46px 0 32px 0;
+    .wrapper {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    background-color: $black80;
+    .wrapper {
+      @include flex-row;
+      height: 94px;
+      align-items: center;
+    }
+  }
+}
+.copyright {
+  @include little-text;
+  line-height: 9px;
+  color: $white;
+}

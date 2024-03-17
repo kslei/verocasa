@@ -1,0 +1,15 @@
+@import '../base/base.scss';
+
+.rating {
+  @include flex-row;
+}
+.rate {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px 2px 2px;
+  background-color: $black100;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url('/star.svg');
+}

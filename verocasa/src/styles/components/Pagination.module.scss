@@ -1,0 +1,39 @@
+@import '../base/base.scss';
+
+:export {
+  black40: $black40;
+}
+
+.pagination {
+  width: 151px;
+  line-height: 11px;
+  @include flex-row;
+  margin-bottom: 5px ;
+}
+.frame {
+  width: 70px;
+  @include flex-row;
+  &__prev, &__next {
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 25px;
+    background-color: $black80;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $black100;
+    }
+    &:disabled {
+      background-color: $black10; 
+    }
+  }
+  &__prev {
+    mask-image: url('/prev.png');
+    
+  }
+  &__next {
+    mask-image: url('/next.png');
+  }
+}

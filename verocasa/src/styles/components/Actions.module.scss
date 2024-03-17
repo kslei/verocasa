@@ -1,0 +1,53 @@
+@import '../base/base.scss';
+
+.actions {
+  width: 100%;
+  margin-bottom: 108px;
+  .wrapper {
+    border-top: 1px solid $black40;
+  }
+}
+
+.data {
+  width: 570px;
+  margin: 0 auto;
+  padding-top: 90px;
+  &__title {
+    text-align: center;
+    h2 {
+      line-height: 27px;
+    }
+  }
+  &__description {
+    @include main-text;
+    line-height: 24px;
+    text-align: center;
+    color: $black80;
+    opacity: 80%;
+    margin: 25px 0 34px 0;
+  }
+}
+.input {
+  position: relative;
+  width: 100%;
+  input[type="text"] {
+    width: calc(100% - 38px);
+    border: 1px solid $black60;
+    border-radius: 15px;
+    padding-block: 12.7px;
+    padding-inline: 18px;
+    @include main-text;
+    font-weight: 300;
+    color: $black60;
+    &::placeholder {
+      color: $black40;
+    }
+  }
+}
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $white;
+  background-color: $black60;
+}
