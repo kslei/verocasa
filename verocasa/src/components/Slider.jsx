@@ -20,14 +20,14 @@ const Slider = ({products}) => {
   const [delta, setDelta] = useState(0);//offset icon__images in px / сдвиг icon__images в рх
 
   //play
-/*   useEffect(() => {
+  useEffect(() => {
     if (play) {
       const int = setInterval(() => {
         nextImg()
-      }, 5000)
+      }, 7000)
       return () => clearInterval(int)
     }
-  }, [count, play]) */
+  }, [count, play])
 
   useEffect(() => {
     if (products.length) {
