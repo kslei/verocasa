@@ -1,14 +1,14 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import Main from './pages/Main.jsx';
 import ProductPage from './pages/ProductPage.jsx';
 import './styles/base/base.scss';
 
-const router = createBrowserRouter([
+const router = createHashRouter ([
     {
         path: "/",
         element: <Main/>,
